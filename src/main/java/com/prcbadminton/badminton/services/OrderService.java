@@ -45,6 +45,7 @@ public class OrderService implements IOrderService{
                 BestSales updateBestSales = new BestSales();
                 updateBestSales.setQuantity(orderList.get(i).getCount());
                 updateBestSales.setProduct_id(product.get());
+                bestSalesRepository.save(updateBestSales);
             }
         }
     }
